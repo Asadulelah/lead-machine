@@ -1,0 +1,27 @@
+{
+  "comment": "Copy to config.json and edit. This example targets real-estate developers; swap everything for your niche.",
+  "apify_actor": "compass/crawler-google-places",
+  "queries": [
+    "real estate developer",
+    "real estate brokerage",
+    "commercial construction company",
+    "luxury home builder"
+  ],
+  "locations": [
+    "New York, New York, United States",
+    "Miami, Florida, United States",
+    "Austin, Texas, United States",
+    "Toronto, Ontario, Canada",
+    "London, United Kingdom"
+  ],
+  "max_places_per_search": 15,
+  "memory_mb": 2048,
+  "max_concurrent_runs": 3,
+  "filters": {
+    "require_website": true,
+    "include_categories": "real estate developer|property developer|real estate agency|construction company|general contractor|home builder|custom home|builder|commercial real estate|brokerage|development",
+    "exclude_categories": "property management|property manager|architec|apartment|self storage|realtor(?!s)|notary|title company|escrow|apprais|home inspector|mortgage|lender|loan|insurance|moving|interior design|landscap|cleaning|pest|plumb|handyman",
+    "domain_blacklist": "zillow|realtor\\.com|redfin|trulia|kw\\.com|kellerwilliams|remax\\.com|century21\\.com|coldwellbanker\\.com|compass\\.com|sothebysrealty\\.com|exprealty|berkshirehathaway|linktr\\.ee|facebook\\.com|instagram\\.com|business\\.site|wixsite|godaddysites"
+  },
+  "output_prefix": "leads"
+}
